@@ -1,12 +1,14 @@
-import React from 'react';
-import styled from "styled-components";
-import './App.css';
+import React from 'react'
 
-function App() {
+import TripleLogo from 'components/TripleLogo'
+
+const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
+      <main>
+        <TripleLogo />
+      </main>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
