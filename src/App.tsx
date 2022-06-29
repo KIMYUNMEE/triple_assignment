@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import TripleLogo from 'components/TripleLogo'
 import Awards from 'components/Awards'
+import Stastic from 'components/Stastic'
 
 const ContentContainer = styled.div`
   position: relative;
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <main>
         <ContentContainer>
           <TripleLogo />
+          <Stastic />
           <Awards />
         </ContentContainer>
       </main>
