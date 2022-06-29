@@ -8,7 +8,6 @@ import Stastic from 'components/Stastic'
 const ContentContainer = styled.div`
   position: relative;
   margin: 0 auto;
-  padding: 50px 0;
   width: 1200px;
   height: auto;
 `

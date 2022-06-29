@@ -8,6 +8,8 @@ import {
 } from 'styles/fontStyle'
 
 const LogoContainer = styled.div`
+  position: absolute;
+  top: 150px;
   padding-top: 280px;
   width: 400px;
   height: 338px;
