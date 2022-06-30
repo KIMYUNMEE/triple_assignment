@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import useCountUp from 'hooks/useCountUp'
 import useVisible from 'hooks/useVisible'
 import { VisbleProps } from 'common/utils/visible'
 import {
@@ -26,17 +27,20 @@ const StasticItem = styled.div`
 
 const Stastic: React.FC = () => {
   const [transY, visiblity] = useVisible()
+  const userCount = useCountUp(350)
+  const userReview = useCountUp(21)
+  const userStore = useCountUp(650)
   return (
     <div>
       <StasticContainer transY={transY} visible={visiblity}>
         <StasticItem>
-          <strong>만 명</strong>의 사용자
+          <strong>{userCount}만 명</strong>의 사용자
         </StasticItem>
         <StasticItem>
-          <strong>만 개</strong>의 리뷰
+          <strong>{userReview}만 개</strong>의 리뷰
         </StasticItem>
         <StasticItem>
-          <strong>만 개</strong>의 저장
+          <strong>{userStore}만 개</strong>의 저장
         </StasticItem>
       </StasticContainer>
     </div>
