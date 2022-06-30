@@ -19,7 +19,6 @@ const StasticContainer = styled.div<VisbleProps>`
 const StasticItem = styled.div`
   margin-bottom: 20px;
   font-size: ${STASTIC_CONTENT_FONTSTYLE}px;
-  font-weight: bold;
   font-family: sans-serif;
   letter-spacing: -1px;
   color: ${STASTIC_CONTENT_COLOR};
