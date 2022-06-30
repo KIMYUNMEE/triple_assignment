@@ -20,8 +20,6 @@ const useCountUp = (rate: number, start = 0): number => {
       }
       if (start === totalFrame) {
         clearInterval(counter)
-        // eslint-disable-next-line no-console
-        console.log(start)
       }
     }, frameRate)
   }, [rate, start])
