@@ -1,19 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import useVisible from 'hooks/useVisible'
+import { VisbleProps } from 'common/utils/visible'
 import { PLAY_STORE_IMG, APP_STORE_IMG } from 'styles/image'
 import {
   AWARDS_CONTENT_COLOR,
   AWARDS_CONTENT_FONTSTYLE,
 } from 'styles/fontStyle'
 
-const AwardsContainer = styled.div`
+const AwardsContainer = styled.div<VisbleProps>`
   margin: 50px 0px 140px 623px;
   color: ${AWARDS_CONTENT_COLOR};
   font-family: sans-serif;
   font-size: ${AWARDS_CONTENT_FONTSTYLE}px;
   font-weight: bold;
   white-space: nowrap;
+  transform: translateY(${(props) => (props.transY ? '0%' : '100%')});
+  opacity: ${(props) => (props.visible ? '1' : '0')};
+  transition: all 700ms ease-in-out 200ms;
 `
 const PlayStore = styled.div`
   display: inline-block;
@@ -31,9 +36,10 @@ const AppStore = styled(PlayStore)`
 `
 
 const Awards: React.FC = () => {
+  const [transY, visiblity] = useVisible()
   return (
     <div>
-      <AwardsContainer>
+      <AwardsContainer transY={transY} visible={visiblity}>
         <PlayStore>
           2018 구글 플레이스토어
           <br />
