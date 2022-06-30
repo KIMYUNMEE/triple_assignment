@@ -16,11 +16,13 @@ const App: React.FC = () => {
   return (
     <div>
       <main>
-        <ContentContainer>
-          <TripleLogo />
-          <Stastic />
-          <Awards />
-        </ContentContainer>
+        <section>
+          <ContentContainer>
+            <TripleLogo />
+            <Stastic />
+            <Awards />
+          </ContentContainer>
+        </section>
       </main>
     </div>
   )
