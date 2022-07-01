@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const useVisible = (): [boolean, boolean] => {
+const useVisiblity = (): [boolean, boolean] => {
   const [transY, setTransY] = useState(false)
   const [visiblity, setVisiblity] = useState(false)
 
@@ -12,4 +12,4 @@ const useVisible = (): [boolean, boolean] => {
   return [transY, visiblity]
 }
 
-export default useVisible
+export default useVisiblity
