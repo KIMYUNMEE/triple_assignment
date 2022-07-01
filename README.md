@@ -104,7 +104,7 @@ tsconfig.json파일에
   
 8. Semantic Markup을 위해 Main으로 잡고 하나의 Section으로 감싸주기
 
-### ui화면 구현하기
+### 화면 구현하기
 
 1. component 생성하기 
 
