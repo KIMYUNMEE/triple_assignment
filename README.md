@@ -60,6 +60,8 @@ Turborepo는 JavaScript와 TypeScript 코드 베이스의 모노레포를 위한
 
 1. 최종 화면  
 
+
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/75771515/176848884-d616fa70-db0f-4e9f-9c1c-d21bb177e594.gif)  
 
 
@@ -71,38 +73,54 @@ Turborepo는 JavaScript와 TypeScript 코드 베이스의 모노레포를 위한
 
 <details>
 <summary>styled-components란</summary>
-<div markdown="1">       
-styled-components란 Javascript 파일 내에서 CSS를 사용할 수 있게 해주는 대표적인 CSS-in-JS 라이브러리로 React 프레임워크를 주요 대상으로 한 라이브러리입니다.
-React에서 컴포넌트가 많으면 분리되어 있는 css파일들을 일일히 찾아 수정하는것에 대해 불편함을 느낄 때 styled-components를 사용한다면 css를 컴포넌트화해서 사용 가능합니다.
-제일 좋은 이유는 css에 props를 사용할 수 있습니다.
-설치하기 : npm install --save styled-components 설치 후 적용할 프로젝트 파일에 import styled from 'styled-components'; 
+<div markdown="1">  
+ 
+styled-components란 Javascript 파일 내에서 CSS를 사용할 수 있게 해주는 대표적인 CSS-in-JS 라이브러리로 React 프레임워크를 주요 대상으로 한 라이브러리입니다.  
+ 
+React에서 컴포넌트가 많으면 분리되어 있는 css파일들을 일일히 찾아 수정하는것에 대해 불편함을 느낄 때 styled-components를 사용한다면 css를 컴포넌트화해서 사용 가능합니다.  
+ 
 </div>
 </details>  
+
+```
+설치하기 : npm install --save styled-components 설치 후 적용할 프로젝트 파일에 import styled from 'styled-components'; 
+```  
+
 
 4. 절대경로를 설정해서 경로를 간단하게 설정하기  
 
 tsconfig.json파일에 
 ```
 "baseUrl": "src"
-```
+``` 
+
 코드를 추가하면 image 파일이나 다른 file들 등 현재 써야할 위치가 깊을 때 절대경로를 설정하면 src부터 찾을 수 있어 편리합니다.  
 
 5. reset css를 설정하기 위해서 styled-components의 Styled-Components Reset 초기설정 하기  
 
 ```
  npm install --save styled-components
- ```
- <details>
-<summary>추가reset css가이드</summary>
+ ``` 
+ 
+<details>
+<summary>(추가) reset css가이드</summary>
 <div markdown="1"> 
-### reset css가이드는 여러개가 있는데 그중 대표적으로 Eric Meyer Reset.css v2.0(Reset초기화 가이드 ), necolas Normalize.css v8.0.1 (Nomarlize 초기화 가이드) Sanitize.css v13.0.0 (혼합 초기화 가이드)등이 있는데 대중적으로 많이 쓰는 reset css 가이드는 Sanitize.css에서 업그레이드된 토미집css입니다.(=Sanitize.css를 기반으로 다른 CSS 초기화 문서를 참고하면서 평소 자주 사용하는 코드 추가 및 정리한 css집)
-### (참고) https://blog.tommyzip.co.kr/code/css-initialization-guide/
+reset css가이드는 여러개가 있는데 그중 대표적으로 Eric Meyer Reset.css v2.0(Reset초기화 가이드 ), necolas Normalize.css v8.0.1 (Nomarlize 초기화 가이드),
+Sanitize.css v13.0.0 (혼합 초기화 가이드)등이 있습니다.  
+ 
+대중적으로 가장 많이 쓰는 reset css 가이드는 Sanitize.css에서 업그레이드된 토미집css입니다.( = Sanitize.css를 기반으로 다른 CSS 초기화 문서를 참고하면서 평소 자주 사용하
+는 코드 추가 및 정리한 css집)
+
+(참고) https://blog.tommyzip.co.kr/code/css-initialization-guide/
+ 
 </div>
 </details>  
+
 
 6. Eslint, Prettier 설정하기  
   
 8. Semantic Markup을 위해 Main으로 잡고 하나의 Section으로 감싸주기
+
 
 ### 화면 구현하기
 
@@ -316,8 +334,8 @@ component를 나누는것들과 폴더 만들기 등 협업하기 좋은 개발�
 그리고 예상치 못한 어려움은 git 관리였습니다. 
 commit하는 과정에서 원격저장소와 로컬저장소가 동기화되지 않아 발생한 문제도 있었고 제가 많이 모르는 부분이 많았습니다.
 이번 기회로 git 관리에 대해 더 정확하게 알게 되었고 협엽하는 환경에서 반드시 완벽하게 마무리해야겠다는 생각이 들었습니다. 
-그리고 기존에 공부했었던 typescript를 써보면서 기존의 jajvascript보다 유용한점이 많아 편리했습니다.  
-특히 type을 미리 지정해놓을 수 있는 것과 미리 에러를 예방할 있는것에 대해 편리함을 느꼈습니다.  
+그리고 기존에 공부했었던 typescript를 써보면서 기존의 jajvascript보다 유용하게 쓸 수 있었습니다.  
+특히 type을 미리 지정해놓을 수 있는 것과 미리 에러를 예방할 있는 것에 대해 편리함을 느꼈습니다.  
 
 여기서 더 나아가 Next.js, Babel, Jest 등 많이 익숙하지 않은 개발환경 및 테스트 기능을 더 공부할 예정입니다.
 짧다면 잛고 길다면 긴 기간동안 과제를 하면서 잘 풀리지 않아 속상할때도 많았지만 과제를 진행할수록 간절하게 '어제보다 오늘이 오늘보다 내일이 성장하는' 제가 되고 싶다는 생각을 하게 되었습니다. 
