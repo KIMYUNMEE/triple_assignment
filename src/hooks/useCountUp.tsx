@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
 
+import { easeOutExpo } from 'common/utils/animation'
+
 const useCountUp = (rate: number, start = 0): number => {
   const [count, setCount] = useState(0)
-  function easeOutExpo(t: number): number {
-    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t)
-  }
-
   useEffect(() => {
     const frameRate = 1000 / 60
     const duration = 2000
