@@ -110,7 +110,7 @@ tsconfig.json파일에
 
 2. component 생성 후 styled-components 이용해서 스타일링 하기
 
-3.  애니메이션 및 countUp함수 만들기  
+3.  animation.tsx 및 hooks(useCountUp,useVisiblity), styles 만들기 
 
 ### 폴더 구조 구성하기  
 
