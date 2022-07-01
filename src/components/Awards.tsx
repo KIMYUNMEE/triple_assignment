@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import useVisible from 'hooks/useVisible'
-import { VisbleProps } from 'common/utils/visible'
+import useVisibility from 'hooks/useVisibility'
+import { VisbleProps } from 'common/utils/visibility'
 import { PLAY_STORE_IMG, APP_STORE_IMG } from 'styles/image'
 import {
   AWARDS_CONTENT_COLOR,
@@ -36,7 +36,7 @@ const AppStore = styled(PlayStore)`
 `
 
 const Awards: React.FC = () => {
-  const [transY, visiblity] = useVisible()
+  const [transY, visiblity] = useVisibility()
   return (
     <div>
       <AwardsContainer transY={transY} visible={visiblity}>
