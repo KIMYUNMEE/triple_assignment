@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import useVisibility from 'hooks/useVisibility'
-import { VisbleProps } from 'common/utils/visibility'
+import useVisiblity from 'hooks/useVisiblity'
+import { VisbleProps } from 'common/utils/visiblity'
 import { TRIPLE_LOGO_IMG } from 'styles/image'
 import {
   TRIPLE_LOGO_CONTENT_COLOR,
@@ -29,7 +29,7 @@ const LogoContainer = styled.div<VisbleProps>`
   transition: all 700ms ease-in-out 0ms;
 `
 const TripleLogo: React.FC = () => {
-  const [transY, visiblity] = useVisibility()
+  const [transY, visiblity] = useVisiblity()
   return (
     <LogoContainer transY={transY} visible={visiblity}>
       2019년 2월 기준

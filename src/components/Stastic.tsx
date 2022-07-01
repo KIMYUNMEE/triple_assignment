@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import useCountUp from 'hooks/useCountUp'
-import useVisibility from 'hooks/useVisibility'
-import { VisbleProps } from 'common/utils/visibility'
+import useVisiblity from 'hooks/useVisiblity'
+import { VisbleProps } from 'common/utils/visiblity'
 import {
   STASTIC_CONTENT_COLOR,
   STASTIC_CONTENT_FONTSTYLE,
@@ -25,7 +25,7 @@ const StasticItem = styled.div`
 `
 
 const Stastic: React.FC = () => {
-  const [transY, visiblity] = useVisibility()
+  const [transY, visiblity] = useVisiblity()
   const userCount = useCountUp(350)
   const userReview = useCountUp(21)
   const userStore = useCountUp(650)
